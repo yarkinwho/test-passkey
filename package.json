@@ -1,0 +1,26 @@
+{
+  "name": "exsat-passkey",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./dist/index.js",
+    "mine": "npm run build && npm start",
+    "dev": "ts-node-dev ./src/index.ts",
+    "test": "mocha --require ts-node/register --recursive ./test/**/*.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@wharfkit/antelope": "^1.0.13",
+    "@wharfkit/wallet-plugin-privatekey": "^1.1.0",
+    "body-parser": "^1.20.3",
+    "connect": "^3.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "jayson": "^4.1.3",
+    "typescript": "^5.7.2",
+    "winston": "^3.17.0"
+  }
+}
