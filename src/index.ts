@@ -166,7 +166,27 @@ class PasskeyService {
                   waits: [],
                 },
               },
+            },
+            {
+              account: "eosio",
+              name: "linkauth",
+              authorization: [
+                {
+                  actor: accountName,
+                  permission: "active",
+                },
+              ],
+              data: {
+                account:accountName,
+                code:"eosio.token",
+                type:"transfer",
+                requirement:passkeyPermission
+              },
             }
+
+
+
+            
           ],
         }
 
