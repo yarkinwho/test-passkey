@@ -226,6 +226,22 @@ class PasskeyService {
                 name: "transfer",
                 authorization: [
                   {
+                    actor: this.config.CHAIN_ACCOUNT,
+                    permission: this.config.CHAIN_PERMISSION,
+                  },
+                ],
+                data: {
+                  from: this.config.CHAIN_ACCOUNT,
+                  to: accountName,
+                  quantity: "0.0100 EOS",
+                  memo: "test passkey transfer",
+                },
+              },
+              {
+                account: "eosio.token",
+                name: "transfer",
+                authorization: [
+                  {
                     actor: accountName,
                     permission: passkeyPermission,
                   },
