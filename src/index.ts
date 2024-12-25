@@ -120,7 +120,7 @@ class PasskeyService {
         const packed = await this.preparePackedTx(tx)
         const accountCreationResponse = await this.rpc.v1.chain.send_transaction2(packed, {
           return_failure_trace: false,
-          retry_trx: false,
+          retry_trx: true,
         })
       }
       catch(error) {
@@ -197,7 +197,7 @@ class PasskeyService {
           
         accountCreationResponse2 = await this.rpc.v1.chain.send_transaction2(packed2, {
           return_failure_trace: false,
-          retry_trx: false,
+          retry_trx: true,
         })}
         catch(error) {
           logger.info(JSON.stringify(error, Object.getOwnPropertyNames(error)))
